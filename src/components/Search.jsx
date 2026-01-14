@@ -12,16 +12,27 @@ const Search = ({fetchWeather}) => {
     }
 
   return (
-    <form onSubmit={handleSubmit} className='flex'>
-        <input 
-        className='p-2 border border-gray-300 bg-black rounded-l-lg flex-1 border-r-0 outline-none' 
-        type="text"
-        value={city}
-        onChange={(e)=> setCity(e.target.value)}
-        placeholder='Enter the City Name' />
+  <form onSubmit={handleSubmit} className="flex w-full max-w-md mx-auto justify-between space-x-2">
+  <input
+    className="flex-grow px-4 py-2 text-base text-black bg-white border border-gray-400 rounded-md 
+               outline-none focus:ring-2 focus:ring-blue-400 transition"
+    type="text"
+    value={city}
+    onChange={(e) => setCity(e.target.value)}
+    placeholder="Enter the City Name"
+  />
 
-        <button className='cursor-pointer p-2 border border-gray-300 bg-blue-500 rounded-r-lg hover:bg-blue-600' type="submit">Submit</button>
-    </form>
+  {city.trim() && (
+    <button
+      className="px-4 py-2 text-base font-medium text-white bg-blue-600 rounded-md 
+                 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 
+                 active:scale-95 transition-all duration-200 ease-in-out shadow-sm"
+      type="submit"
+    >
+      Search
+    </button>
+  )}
+</form>
   )
 }
 
