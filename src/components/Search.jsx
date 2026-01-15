@@ -18,8 +18,8 @@ const Search = ({ fetchWeather }) => {
     >
       {/* Input box */}
       <input
-        className="flex-1 p-3 border border-gray-300 rounded-lg bg-white text-black shadow-sm 
-                   focus:ring-2 focus:ring-blue-400 outline-none"
+        className="flex-1 p-3 border border-gray-300 rounded-lg bg-black text-white shadow-sm 
+                   focus:ring-1 focus:ring-blue-400 outline-none"
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
