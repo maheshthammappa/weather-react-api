@@ -12,7 +12,8 @@ function App() {
   const API_KEY= import.meta.env.VITE_API_KEY;
   const fetchWeather = async (city) => {
       setLoading(true);
-      setError('')
+      setError('');
+      setWeather(null);
 
       try {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
